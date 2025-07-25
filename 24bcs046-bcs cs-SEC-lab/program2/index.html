@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> main program:Guess the number game</h2>
+    <input type="number" id="maininput" placeholder="enter your guess">
+    <button onclick="playgame()">guess</button>
+    <p id="feedback"></p>
+    <P id="attempts"></P>
+    <script>
+        let target=Math.floor(Math.random()*100)+1;
+        let count=0;
+        function playgame(){
+            let guess=parseInt(document.getElementById("maininput").Value);
+            count++;
+            if( guess<target){
+                document.getElementById("feedback").innerText="too low";
+            }else
+            if(guess>target){
+                document.getElementById("feedback").innerText="too high";
+            }else{
+                document.getElementById("feedback").innerText="correct!";
+                document.getElementById("attempts").innerText="You guessed it"+count+"attemts";
+
+            }
+        }
+    </script>     
+
+</body>
+</html> 
