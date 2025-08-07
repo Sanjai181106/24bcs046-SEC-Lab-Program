@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functional calculator</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input,select,button{
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color:rgb(7, 7, 7);
+        }
+
+    </style>
+</head>
+<body>
+    <h2> saran calucator crt ah thappah sollum avlothaaa</h2>
+    <input type="number" id="num1" placeholder="enter first number">
+    <input type="number" id="num2" placeholder="enter second number">
+    <select id="operation">
+        <option value ="add">Add(+)</option>
+        <option value ="subract">Subract(-)</option>
+        <option value ="multiply">Multiply(*)</option>
+        <option value ="divide">Divide(/)</option>
+    </select>
+    <button onclick="calculator()">calculate</button>
+    <div id="result">Result</div>
+    <script>
+        function calculator(){
+            const num1=parseFloat(document.getElementById("num1").value);
+            const num2=parseFloat(document.getElementById("num2").value);
+            const operation=document.getElementById("operation").value;
+            let result;
+            if(isNaN(num1)||isNaN(num2)){
+                result=" please enter valid number!";
+            }else{
+                switch(operation){
+                    case "add":
+                    result=num1+num2;
+                    break;
+                    case "subract":
+                    result=num1-num2;
+                    break;
+                    case "multiply":
+                    result=num1*num2;
+                    break;
+                    case "divide":
+                    if (num2==0){
+                        result="cannot divide by zero!";
+                    }else{
+                        result=num1/num2;
+                    }  
+                    break;
+                    default:
+                        result="invalid operation!";
+                }
+                }
+                document.getElementById("result").innerText="ungaludaya vidai: "+result;
+            }       
+    </script> 
+</body>
+</html>
