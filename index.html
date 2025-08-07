@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form Validation</title>
+<style>
+.error {
+color: red;
+font-size: 12px;
+}
+</style>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form id="registrationForm" onsubmit="return validateForm()">
+<!-- Name Field -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+<div id="nameError" class="error"></div>
+<br><br>
+<!-- Email Field -->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<div id="emailError" class="error"></div>
+<br><br>
+<!-- Password Field -->
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+<div id="passwordError" class="error"></div>
+<br><br>
+<!-- Phone Number Field -->
+<label for="phone">Phone Number:</label>
+<input type="text" id="phone" name="phone" required>
+<div id="phoneError" class="error"></div>
+<br><br>
+<button type="submit">Submit</button>
+</form>
+<script src="validate.js"></script>
+</body>
+</html>
