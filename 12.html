@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // set-> cannot accept duplicate,unqiuely identifiers valuees.
+        // create a set
+        let email=new Set([]);
+        email.add("cricket@gmail.com");
+        email.add("kabbadi@gmail.com");
+        email.add("wwe@gmail.com");
+        console.log(email)
+        
+        for(let mail of email){
+            console.log(email);
+        }
+
+        email.forEach(x =>{
+            console.log(x)
+        })
+        let adminperm= new Set(["write","read","delete"])
+        let userperm= new Set(["read"]);
+
+        function hasPerm(role,perm){
+            return role.has(perm);
+        }
+        console.log(hasPerm(adminperm,"delete"));
+        console.log(hasPerm(userperm,"delete"));
+        //map
+        let user1={name:"simmu"};
+        let user2={name:"vishwa"};
+        let map=new Map();
+        map.set(user1," hi MR golumalu!");
+        map.set(user2," hi MR golumalu!");
+        console.log(map)
+        
+
+
+    </script>
+</body>
+</html>
