@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        // local storage stores data permanently (untill cleared users or code).
+        // syntax:
+        // localStorage.setItem("key","value");
+         localStorage.setItem("24bcs000","Virat");
+          console.log(localStorage.getItem("24bcs000")); 
+          localStorage.removeItem("24bcs000");
+        localStorage.clear();
+        
+        //storing arrays
+        // local storage only stores strings,not array.
+        // we need to convert  array into a string (using json.stringify)
+        // before storing.
+        let programming = ["vishwa murugan","ajay venkatachellam"];
+        localStorage.setItem("programming",JSON.stringify(programming));
+                let storededLang=JSON.parse( localStorage.getItem("programming"));
+        console.log(storededLang);
+
+        //
+        let person=[{
+            "name":"js",
+            "job":"developer"
+        }]
+        localStorage.setItem("person",JSON.stringify(person));
+        let arrobj=JSON.parse(localStorage.getItem("person"));
+        console.log(arrobj);
+    </script>
+</body>
+</html>
